@@ -91,38 +91,27 @@ function stopFun(){
 
  
  
-
+//enable Playstation Function
 function Playstation(){ 
     console.log("Playstation() started"); 
     mySound= new sound("us-lab-background.mp3"); 
-    mySound.play(); 
+    mySound.play(); //play audio 
 } 
 
  
  
-
+//Input Sound File
 function sound(srcFile){ 
-
     this.sound = document.createElement("audio"); 
-
     this.sound.src = srcFile; 
-
-    this.sound.setAttribute("preload","audio"); 
-
+    this.sound.setAttribute("preload","audio"); //preload audio program
     this.sound.setAttribute("controls","none"); 
-
-    this.sound.style.display = "none"; 
-
-    document.body.appendChild(this.sound); 
-
+    this.sound.style.display = "none";   //no controls 
+    document.body.appendChild(this.sound);  //locks enable 
     this.play = function(){ 
-
-        this.sound.play();   
-
+        this.sound.play();   //play button enabled 
     } 
-
-     this.stop = function(){ 
-
+     this.stop = function(){ //audio disabled 
         this.sound.pause(); 
 
     } 
